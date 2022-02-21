@@ -8,19 +8,29 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class SQRServiceTest {
 
     @Test
-    void manySquares() {
+    void calculate() {
         SQRService service = new SQRService();
-        int min = 200;
-        int max = 300;
-        int actual = service.manySquares(200, 300);
+        int expected = 5;
+        int actual = service.countSquares(100, 200);
+
+        assertEquals(expected, actual);
         System.out.println(actual);
     }
 
     @Test
-    void manySquares2() {
+    void count() {
         SQRService service = new SQRService();
         int expected = 3;
-        int actual = service.manySquares(200, 300);
+        int actual = service.countSquares(200, 300);
+
+        assertEquals(expected, actual);
+        System.out.println(actual);
+    }
+    @Test
+    void countRange() {
+        SQRService service = new SQRService();
+        int expected = 3;
+        int actual = service.countSquares(300, 400);
 
         assertEquals(expected, actual);
         System.out.println(actual);
